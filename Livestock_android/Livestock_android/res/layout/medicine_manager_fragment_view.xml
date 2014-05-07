@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/medicine_func"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+            
+		<TextView
+	       android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/medicine_record"/>
+		
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="2dip"
+           android:background="#FF909090" />
+
+    </LinearLayout>
+    
+    
+    <TableRow
+        	android:id="@+id/medicine_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_below="@+id/medicine_func">
+
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/select"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_startTime"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_productName"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_factory"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_medicineType"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+         <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_standard"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+         
+          <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_validityPeriod"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+          
+           <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_batchNumber"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+           
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_dosage"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+            
+             <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/medicine_endTime"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+    </TableRow>
+    
+    <LinearLayout
+            android:id="@+id/medicine_page_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/pre_medicine_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pre_page"/>
+
+        <Button
+                android:id="@+id/next_medicine_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/next_page"/>
+
+        <Button
+                android:id="@+id/medicine_refresh_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/refresh"/>
+
+        <Spinner
+                android:id="@+id/medicine_year_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/year"/>
+    </LinearLayout>
+
+    <edu.hbut.livestock.util.MyListView
+            android:id="@+id/medicineRecord_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/medicine_page_view"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/medicine_title"/>
+
+    <TextView
+            android:id="@+id/spinner_default_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"/>
+
+</RelativeLayout>

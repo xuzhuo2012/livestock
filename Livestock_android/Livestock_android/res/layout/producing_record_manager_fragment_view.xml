@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/producing_record_func"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true">
+
+        <Spinner
+                android:id="@+id/producing_record_manager_submodule_select"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.16"/>
+
+        <Button
+                android:id="@+id/add_producing_record_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/add"/>
+
+        <Button
+                android:id="@+id/delete_producing_record_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/delete"/>
+
+        <Button
+                android:id="@+id/query_producing_record_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/query"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/producing_record_page_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/pre_producing_record_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pre_page"/>
+
+        <Button
+                android:id="@+id/next_producing_record_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/next_page"/>
+
+        <Button
+                android:id="@+id/refresh_producing_record_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/refresh"/>
+
+        <Spinner
+                android:id="@+id/producing_record_year_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/producing_record_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/producing_record_page_view"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/producing_record_func">
+    </ListView>
+
+    <TextView
+            android:id="@+id/spinner_default_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/user_list_view"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:focusable="true"
+             android:focusableInTouchMode="false"
+             android:paddingTop="10dp"
+             android:layout_marginTop="20dp">
+    
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:scrollbars="horizontal">
+		 <CheckBox
+		     	android:id="@+id/disinfect_item_select"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        
+        <TextView
+                android:id="@+id/disinfect_date_show"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+         
+        <TextView
+                android:id="@+id/disinfect_place_show"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:id="@+id/disinfect_medicine_show"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:id="@+id/medicine_factory_show"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:id="@+id/disinfect_dosage_show"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:id="@+id/disinfect_method_show"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:id="@+id/disinfect_operator_show"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textIsSelectable="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+    </TableRow>
+
+</TableLayout>

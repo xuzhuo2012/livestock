@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/immunization_func"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+       <TextView
+		    android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/immune_record"/>
+		
+       <View
+           android:layout_width="fill_parent"
+           android:layout_height="2dip"
+           android:background="#FF909090" />
+    </LinearLayout>
+    
+    
+    <TableRow
+        	android:id="@+id/immunization_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_below="@+id/immunization_func">
+
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/select"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_immunizationTime"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_userid"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_houseid"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+        <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_totalCount"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+        
+         <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_vaccine"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+         
+          <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_vaccineFactory"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+          
+           <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_batchNumber"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+           
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_dosage"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+            
+             <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/immunization_immunizationMethod"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"/>
+    </TableRow>
+    
+    <LinearLayout
+            android:id="@+id/immunization_page_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/pre_immunization_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pre_page"/>
+
+        <Button
+                android:id="@+id/next_immunization_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/next_page"/>
+
+        <Button
+                android:id="@+id/immunization_refresh_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/refresh"/>
+
+        <Spinner
+                android:id="@+id/immunization_year_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/year"/>
+    </LinearLayout>
+
+    <edu.hbut.livestock.util.MyListView
+            android:id="@+id/immunization_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/immunization_page_view"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/immunization_title"/>
+
+    <TextView
+            android:id="@+id/spinner_default_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"/>
+
+</RelativeLayout>

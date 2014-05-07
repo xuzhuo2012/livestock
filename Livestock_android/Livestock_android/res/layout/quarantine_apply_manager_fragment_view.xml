@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/quarantine_apply_func"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+            
+		<TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/quarantine_name"/>
+		
+		<LinearLayout android:id="@+id/linearLayout1"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:gravity="right">
+        <Button
+                android:id="@+id/add_quarantine_applyrecord_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/quarantine_quarantine"/>
+
+        <Button
+                android:id="@+id/delete_quarantine_applyrecord_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/reject"/>
+		</LinearLayout>
+        <!--<Button-->
+                <!--android:id="@+id/query_quarantine_apply_button"-->
+                <!--style="?android:attr/buttonBarButtonStyle"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="@string/query"/>-->
+         <View android:layout_width="fill_parent"
+             android:layout_height="2dip"
+             android:background="#FF909090"/>      
+    </LinearLayout>
+    
+    <TableRow
+        	android:id="@+id/quarantine_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_below="@+id/quarantine_apply_func">
+            
+         <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/select"
+                android:layout_weight="1"/>
+
+       	<TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/quarantine_apply_date"
+                android:layout_weight="1"/>
+       	
+       	<TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/quarantine_count"
+                android:layout_weight="1"/>
+       	
+       	<TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/quarantine_sign"
+                android:layout_weight="1"/>
+       	
+       	<TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/quarantine_result"
+                android:layout_weight="1"/>
+       	
+       	 <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/quarantine_operator"
+                android:layout_weight="1"/>
+    </TableRow>
+
+    <LinearLayout
+            android:id="@+id/quarantine_apply_page_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/pre_quarantine_apply_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pre_page"/>
+
+        <Button
+                android:id="@+id/next_quarantine_apply_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/next_page"/>
+
+        <Button
+                android:id="@+id/quarantine_apply_refresh_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/refresh"/>
+
+        <Spinner
+                android:id="@+id/quarantine_apply_year_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:text="@string/year"/>
+    </LinearLayout>
+
+    <edu.hbut.livestock.util.MyListView
+            android:id="@+id/quarantine_applyrecord_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/quarantine_apply_page_view"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/quarantine_title"/>
+
+    <TextView
+            android:id="@+id/spinner_default_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"/>
+
+</RelativeLayout>
